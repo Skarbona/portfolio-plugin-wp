@@ -153,16 +153,31 @@ function fs_gallery_init() {
     register_post_type( 'gallery', $args );
 }
 
-function fs_custom_rest_menu() {
-        register_rest_route(
-            'fs/v2',
-            'menus',
-            array(
-                'methods'  => 'GET',
-                'callback' => 'fs_menus_get_all_menus'
+function fs_portfolio_add_custom_fields_to_rest(){
+    register_rest_field(
+        'portfolio',
+        'meta',
+        array(
+            'get_callback'    => 'get_post_meta_for_api',
+            'update_callback' => null,
+            'schema'          => null
+        )
+    );
 
-            )
-        );
+}
+
+function fs_custom_rest_menu() {
+
+    register_rest_route( 'fs/v2', '/menu', array(
+        'methods' => 'GET',
+        'callback' => 'get_menu',
+    ) );
+
+    function get_menu() {
+        # Change 'menu' to your own navigation slug.
+        return wp_get_nav_menu_items(9);
+    }
+
 
 
 }

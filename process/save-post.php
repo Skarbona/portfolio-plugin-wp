@@ -16,18 +16,7 @@ function fs_portfolio_save_post_admin($post_id,$post,$update) {
 
 }
 
-function fs_portfolio_add_custom_fields_to_rest(){
-        register_rest_field(
-            'portfolio',
-            'meta',
-            array(
-                'get_callback'    => 'get_post_meta_for_api',
-                'update_callback' => null,
-                'schema'          => null
-            )
-        );
 
-}
 
 function get_post_meta_for_api( $object ) {
     //get the id of the post object array

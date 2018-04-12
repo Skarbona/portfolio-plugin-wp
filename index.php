@@ -20,6 +20,7 @@ include('includes/activate.php');
 include('includes/init.php');
 include('includes/admin/init.php');
 include('process/save-post.php');
+include('includes/menus/menus.php');
 
 //Hooks
 register_activation_hook(__FILE__,'fs_activate_plugin');
@@ -31,4 +32,7 @@ add_action('save_post_portfolio','fs_portfolio_save_post_admin', 10, 3);
 add_action( 'rest_api_init', 'fs_portfolio_add_custom_fields_to_rest' );
 add_action( 'rest_api_init', 'fs_custom_rest_menu' );
 //Shortcodes
+
+
+
 

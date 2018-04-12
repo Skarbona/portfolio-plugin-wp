@@ -12,3 +12,9 @@ function fs_menus_get_all_menus() {
 
     return $menus;
 }
+
+function fs_menus_get_menu_data( $data ) {
+    $menus   = wp_get_nav_menu_object($data['id']);
+    $menu_items  = wp_get_nav_menu_items($data['id']);
+    return $menu_items;
+}
