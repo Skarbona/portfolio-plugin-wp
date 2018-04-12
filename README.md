@@ -8,6 +8,7 @@ Custom Post Type with REST API
 - Connect Custom post/category/tag type to REST API
 - Multilanguage support
 - Custom Meta Data (Github/Live link)
+- Connect WP menu to REST API
 - Connect Custom Meta Data to REST API
 
 

@@ -152,3 +152,17 @@ function fs_gallery_init() {
 
     register_post_type( 'gallery', $args );
 }
+
+function fs_custom_rest_menu() {
+        register_rest_route(
+            'fs/v2',
+            'menus',
+            array(
+                'methods'  => 'GET',
+                'callback' => 'fs_menus_get_all_menus'
+
+            )
+        );
+
+
+}
