@@ -3,7 +3,7 @@ Custom Post Type with REST API
 
 > Features:
 
-- Custom post type (Portfolio)
+- Custom post type (Portfolio,Gallery)
 - Custom Category and Tags type
 - Connect Custom post/category/tag type to REST API
 - Multilanguage support

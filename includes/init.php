@@ -111,3 +111,44 @@ function fs_create_portfolio_taxonomies()
 
     register_taxonomy( 'portfolio-tags', 'portfolio', $argst );
 }
+
+function fs_gallery_init() {
+    $labels = array(
+        'name'               => __( 'Gallery',  'portfolio' ),
+        'singular_name'      => __( 'Gallery',  'portfolio' ),
+        'menu_name'          => __( 'Gallery',  'portfolio' ),
+        'name_admin_bar'     => __( 'Gallery',  'portfolio' ),
+        'add_new'            => __( 'Add New',  'portfolio' ),
+        'add_new_item'       => __( 'Add New Gallery', 'portfolio' ),
+        'new_item'           => __( 'New Gallery', 'portfolio' ),
+        'edit_item'          => __( 'Edit Gallery', 'portfolio' ),
+        'view_item'          => __( 'View Gallery', 'portfolio' ),
+        'all_items'          => __( 'All Galleries', 'portfolio' ),
+        'search_items'       => __( 'Search Galleries', 'portfolio' ),
+        'parent_item_colon'  => __( 'Parent Gallery:', 'portfolio' ),
+        'not_found'          => __( 'No gallery found.', 'portfolio' ),
+        'not_found_in_trash' => __( 'No galleries found in Trash.', 'portfolio' )
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'description'        => __( 'A Filip Sokolowski Gallery', 'portfolio' ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'gallery' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 20,
+        'show_in_rest'       => true,
+        'rest_base'          => 'gallery-api',
+        'rest_controller_class' => 'WP_REST_Posts_Controller',
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+
+    );
+
+    register_post_type( 'gallery', $args );
+}
