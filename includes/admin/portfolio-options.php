@@ -10,6 +10,11 @@ function fs_portfolio_options_mb($post) {
     <div class="form-group">
         <label style="font-weight:700">Live Prieview URL</label>
         <input type="text" class="form-control" name="fs_live_url" value="<?php echo $portfolio_data['live']; ?>" style="width:100%;">
+    </div><br/>
+
+    <div class="form-group">
+        <label style="font-weight:700">Main Tech</label>
+        <input type="text" class="form-control" name="fs_tech" value="<?php echo $portfolio_data['tech']; ?>" style="width:100%;">
     </div>
 
 

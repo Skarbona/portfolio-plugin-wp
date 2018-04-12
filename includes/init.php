@@ -68,7 +68,7 @@ function fs_create_portfolio_taxonomies()
         'query_var'         => true,
         'rewrite'           => array('slug' => 'portfolio-category'),
         'show_in_rest'       => true,
-        'rest_base'          => 'portfolio-category',
+        'rest_base'          => 'portfolio_category',
         'rest_controller_class' => 'WP_REST_Terms_Controller',
     );
 
@@ -105,7 +105,7 @@ function fs_create_portfolio_taxonomies()
         'query_var'                  => true,
         'rewrite'                    => array( 'slug' => 'portfolio-tags' ),
         'show_in_rest'              => true,
-        'rest_base'                 => 'porfolio-tags',
+        'rest_base'                 => 'porfolio_tags',
         'rest_controller_class'     => 'WP_REST_Terms_Controller',
     );
 
